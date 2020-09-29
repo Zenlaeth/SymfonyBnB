@@ -67,6 +67,17 @@ class AdController extends AbstractController
             'form' => $form->createView()
         ]);
     }
+    
+    /**
+     * Permet d'afficher le formulaire d'édition
+     *
+     * @Route("/ads/{slug}/edit", name="ads_edit")
+     * 
+     * @return Response
+     */
+    public function edit(){
+        return $this->render('ad/edit.html.twig');
+    }
         
     /**
      * Permet d'afficher une seule annonce
